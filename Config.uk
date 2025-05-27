@@ -1,0 +1,10 @@
+config LIBUCONTEXT
+	bool "ucontext: Sytem V like user-space context switching"
+	default n
+	select LIBNOLIBC if !HAVE_LIBC
+	select LIBUKDEBUG
+	select LIBUKALLOC
+
+if LIBUCONTEXT
+
+endif
